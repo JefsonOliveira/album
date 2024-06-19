@@ -1,7 +1,14 @@
-const FotoList = () => {
+/* eslint-disable react/prop-types */
+import Foto from "./Foto";
+
+const FotoList = ({ fotos, setFotoAmpliada }) => {
   return (
-    <h1>Foto List</h1>
-  )
-}
+    <div className="album">
+      {fotos.map((foto) => (
+        <Foto key={foto.id} dados={foto} setFotoAmpliada={setFotoAmpliada} />
+      ))}
+    </div>
+  );
+};
 
 export default FotoList;
