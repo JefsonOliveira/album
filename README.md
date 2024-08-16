@@ -12,10 +12,7 @@
 ## Tecnologias Utilizadas
 
 - **Frontend:** ReactJS
-- **Estilo:** CSS e Material-UI
-- **Gerenciamento de Estado:** React Context API
-- **Roteamento:** React Router
-- **Requisições HTTP:** Axios
+- **Estilo:** CSS 
 
 ## Instalação e Uso
 
