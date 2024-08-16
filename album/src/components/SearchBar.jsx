@@ -11,12 +11,22 @@ const SearchBar = ({ setQuery, setCategoria, setActivateSearch }) => {
     "Esportes",
   ];
 
+  const handleSearch = () => {
+    setQuery(localQuery);
+    setActivateSearch(true);
+  };
+
   return (
     <div className="search-bar">
       <input
         type="text"
         value={localQuery}
         onChange={(e) => setLocalQuery(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            handleSearch();
+          }
+        }}
         placeholder="Pesquisar fotos..."
       />
       <button
@@ -32,6 +42,7 @@ const SearchBar = ({ setQuery, setCategoria, setActivateSearch }) => {
           setCategoria(e.target.value);
           setActivateSearch(true);
         }}
+        className="search-option"
       >
         <option value="">Todas as categorias</option>
         {categorias.map((cat) => (

@@ -20,11 +20,17 @@
 
 .search-bar button {
   padding: 11px 20px;
+  cursor: pointer;
 }
 
 .search-bar select {
   padding: 10px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-option {
+  cursor: pointer;
 }
 
 /* Estilo para a lista de fotos */
